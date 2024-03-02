@@ -74,17 +74,31 @@ class MyFirstParasha {
         System.out.println(String.format("Задание №4"));
         System.out.println(String.format("Проверка кратности числа: a = %s и b = %s.", +a, +b));
         if ((a % b) == 0) {
-            System.out.println(String.format("Первое число кратно второму"));
+            System.out.println(String.format("Первое число кратно второму."));
         } else {
-            System.out.println(String.format("Второе число некратно второму"));
-            System.out.println(String.format("Остаток: %d", a % b));
+            System.out.println(String.format("Первое число некратно второму. \nОстаок: %d", a % b));
         }
     }
-
+    public static void task10() {
+        int year = 2024;
+        System.out.println(String.format("Задание №10"));
+        System.out.println(String.format("Определить високосный год или нет: year = %s.", +year));
+        if ((year % 4 == 0 && (year % 400 == 0) || (year % 100 != 0))) {
+            System.out.println(String.format("Год: %s - является вискокосным.", +year));
+        } else {
+            System.out.println(String.format("Год: %s не является вискокосным.", +year));
+        }
+    }
     public static void main(String[] args) {
         task1();
         task2();
         task3();
         task4();
+        /**task5();
+        task6();
+        task7();
+        task8();
+        task9();*/
+        task10();
     }
 }
