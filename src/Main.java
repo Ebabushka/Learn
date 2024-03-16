@@ -6,12 +6,12 @@ class MyFirstParasha {
         Double c = 12.0;
         System.out.println(String.format("Задание №1: \nНайти наибольшее из трех чисел: a = %s, b = %s, c = %s.", +a, +b, +c));
         if (a > b && a > c) {
-            System.out.println(String.format("Ответ: a = %s", +a));
+            System.out.println(String.format("Ответ: a = %s", a));
         } else {
             if (b > a && b > c) {
-                System.out.println(String.format("Ответ: b = %s", +b));
+                System.out.println(String.format("Ответ: b = %s", b));
             } else {
-                System.out.println(String.format("Ответ: c = %s", +c));
+                System.out.println(String.format("Ответ: c = %s", c));
             }
         }
     }
@@ -25,13 +25,13 @@ class MyFirstParasha {
             System.out.println(String.format("Ошибка"));
         } else {
             if (a < b && a > c && a > b && a < c) {
-                System.out.println(String.format("Ответ: a = %s", a));
+                System.out.println(String.format("Ответ: %s", a));
             } else {
                 if (b < a && b > c && b > a && b < c) {
-                    System.out.println(String.format("Ответ: b = %s", b));
+                    System.out.println(String.format("Ответ: %s", b));
                 } else {
                     if (c < a && c > b && c > a && c < b) {
-                        System.out.println(String.format("Ответ: c = %s", c));
+                        System.out.println(String.format("Ответ: %s", c));
                     }
                 }
             }
@@ -39,8 +39,8 @@ class MyFirstParasha {
     }
 
     public static void task3() {
-        int a = 4;
-        int b = 4;
+        Integer a = 4;
+        Integer b = 4;
         System.out.println(String.format("Задание №3: \nВывести нечетное число из двух чисел: a = %s, b = %s.", +a, +b));
         if (a % 2 != 0) {
             System.out.println(String.format("Ответ: a = %s", a));
@@ -54,8 +54,8 @@ class MyFirstParasha {
     }
 
     public static void task4() {
-        int a = 5;
-        int b = 4;
+        Integer a = 5;
+        Integer b = 4;
         System.out.println(String.format("Задание №4: \nПроверка кратности числа: a = %s и b = %s.", a, b));
         if ((a % b) == 0) {
             System.out.println(String.format("Первое число кратно второму."));
@@ -66,16 +66,16 @@ class MyFirstParasha {
 
     public static void task5() {
         System.out.println(String.format("Задание №5: \nВычислить значения функции: y=f(x)"));
-        double x = -4.0;
+        Double x = -4.0;
         if (x > 0) {
-            double y = x - 2;
+            Double y = x - 2;
             System.out.println(String.format("Ответ: y = %s", y));
         } else {
             if (x == 0) {
-                double y = 0;
+                Double y = 0.0;
                 System.out.println(String.format("Ответ: y = %s", y));
             } else {
-                double y = Math.abs(x);
+                Double y = Math.abs(x);
                 System.out.println(String.format("Ответ: y = %s", y));
             }
         }
@@ -83,8 +83,8 @@ class MyFirstParasha {
 
     public static void task6() {
         System.out.println(String.format("Задание №6: \nОпределение четверти на координатной плоскости"));
-        double x = 0;
-        double y = 8;
+        Double x = 0.0;
+        Double y = 8.0;
         if (x == 0) {
             System.out.println(String.format("Точка лежит на оси: X"));
         } else {
@@ -112,9 +112,9 @@ class MyFirstParasha {
 
     public static void task7() {
         System.out.println(String.format("Задание №7 \nОпределить возможность существования треугольника по сторонам"));
-        double a = 4;
-        double b = 5;
-        double c = 6;
+        Double a = 4.0;
+        Double b = 5.0;
+        Double c = 6.0;
         if (a < b + c && b < a + c && c < a + b) {
             System.out.println(String.format("Ответ: Треугольник существует"));
         } else {
@@ -128,10 +128,10 @@ class MyFirstParasha {
 
     public static void task8() {
         System.out.println(String.format("Задача №8 \nПринадлежит ли точка кругу с центром в начале координат"));
-        double x = 4.0;
-        double y = 5.0;
-        double r = 3.0;
-        double hyp = Math.sqrt(x * x + y * y);
+        Double x = 4.0;
+        Double y = 5.0;
+        Double r = 3.0;
+        Double hyp = Math.sqrt(x * x + y * y);
         if (hyp <= r) {
             System.out.println(String.format("Точка принадлежит кругу"));
         } else {
@@ -140,7 +140,7 @@ class MyFirstParasha {
     }
 
     public static void task9() {
-        int pl = 1;
+        Integer pl = 1;
         System.out.println(String.format("Задание №9 \nВычисление площади геометрических фигур"));
         if (pl == 1) {
             Double a = 4.0;
@@ -164,7 +164,7 @@ class MyFirstParasha {
     }
 
     public static void task10() {
-        int year = 200;
+        Integer year = 200;
         System.out.println(String.format("Задание №10 \nОпределить високосный год или нет: %s.", year));
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(String.format("Год: %s - является вискокосным.", year));
