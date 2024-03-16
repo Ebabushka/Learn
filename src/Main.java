@@ -30,9 +30,7 @@ class MyFirstParasha {
                 if (b < a && b > c && b > a && b < c) {
                     System.out.println(String.format("Ответ: %s", b));
                 } else {
-                    if (c < a && c > b && c > a && c < b) {
-                        System.out.println(String.format("Ответ: %s", c));
-                    }
+                    System.out.println(String.format("Ответ: %s", c));
                 }
             }
         }
@@ -118,11 +116,7 @@ class MyFirstParasha {
         if (a < b + c && b < a + c && c < a + b) {
             System.out.println(String.format("Ответ: Треугольник существует"));
         } else {
-            if (a > b + c && b < a + c && c < a + b) {
-                System.out.println(String.format("Ответ: Треугольник не существует. Сторона А больше."));
-            } else {
-                System.out.println(String.format("Ответ: Треугольник не существует"));
-            }
+            System.out.println(String.format("Ответ: Треугольник не существует"));
         }
     }
 
@@ -164,7 +158,7 @@ class MyFirstParasha {
     }
 
     public static void task10() {
-        Integer year = 200;
+        Integer year = 2000;
         System.out.println(String.format("Задание №10 \nОпределить високосный год или нет: %s.", year));
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(String.format("Год: %s - является вискокосным.", year));
