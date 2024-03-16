@@ -83,12 +83,12 @@ class MyFirstParasha {
 
     public static void task9() {
         int pl = 1;
-         (pl == 1) {
+        if (pl == 1) {
             Double a = 4.0;
             Double b = 2.0;
             Double s_pr = a * b;
             System.out.println(String.format("Площадь прямоугольника: s_pr =s%", s_pr));
-        } else {
+        } else{
             if (pl == 2) {
                 Double d = 4.0;
                 Double h = 8.0;
@@ -124,7 +124,7 @@ class MyFirstParasha {
          task6();
          task7();
          task8();*/
-         task9();
+        task9();
         task10();
     }
 }
