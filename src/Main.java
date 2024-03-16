@@ -80,15 +80,15 @@ class MyFirstParasha {
         double x = -4.0;
         if (x > 0) {
             double y = x - 2;
-            System.out.println(String.format("y = %s", +y));
+            System.out.println(String.format("Ответ: y = %s", +y));
         } else {
             if (x == 0) {
                 double y = 0;
-                System.out.println(String.format("%s", +y));
+                System.out.println(String.format("Ответ: y = %s", +y));
             } else {
                 if (x < 0) {
                     double y = Math.abs(x);
-                    System.out.println(String.format("%s", +y));
+                    System.out.println(String.format("Ответ: y = %s", +y));
                 }
             }
         }
