@@ -68,6 +68,7 @@ class MyFirstParasha {
             }
         }
     }
+
     public static void task4() {
         int a = 5;
         int b = 4;
@@ -79,6 +80,30 @@ class MyFirstParasha {
             System.out.println(String.format("Первое число некратно второму. \nОстаок: %d", a % b));
         }
     }
+
+    public static void task9() {
+        int pl = 1;
+         (pl == 1) {
+            Double a = 4.0;
+            Double b = 2.0;
+            Double s_pr = a * b;
+            System.out.println(String.format("Площадь прямоугольника: s_pr =s%", s_pr));
+        } else {
+            if (pl == 2) {
+                Double d = 4.0;
+                Double h = 8.0;
+                Double s_tr = 1 / 2 * d * h;
+                System.out.println(String.format("Площадь прямоугольника: s_tr=%s", s_tr));
+            } else {
+                if (pl == 3) {
+                    Double r = 4.0;
+                    Double s_kr = 4 * Math.PI * r * r;
+                    System.out.println(String.format("Площадь прямоугольника: s_kr=%s", s_kr));
+                }
+            }
+        }
+    }
+
     public static void task10() {
         int year = 2024;
         System.out.println(String.format("Задание №10"));
@@ -89,16 +114,17 @@ class MyFirstParasha {
             System.out.println(String.format("Год: %s не является вискокосным.", +year));
         }
     }
+
     public static void main(String[] args) {
         task1();
         task2();
         task3();
         task4();
         /**task5();
-        task6();
-        task7();
-        task8();
-        task9();*/
+         task6();
+         task7();
+         task8();*/
+         task9();
         task10();
     }
 }
