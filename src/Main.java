@@ -3,7 +3,7 @@ class MyFirstParasha {
     public static void task1() {
         Double a = 11.0;
         Double b = 9.0;
-        Double c = 10.0;
+        Double c = 12.0;
         System.out.println(String.format("Задание №1: \nНайти наибольшее из трех чисел: a = %s, b = %s, c = %s.", +a, +b, +c));
         if (a > b && a > c) {
             System.out.println(String.format("Ответ: a = %s", +a));
@@ -11,12 +11,10 @@ class MyFirstParasha {
             if (b > a && b > c) {
                 System.out.println(String.format("Ответ: b = %s", +b));
             } else {
-                if (c > a && c > b) {
                     System.out.println(String.format("Ответ: c = %s", +c));
                 }
             }
         }
-    }
 
     public static void task2() {
         Double a = 4.0;
@@ -29,17 +27,17 @@ class MyFirstParasha {
             if (a < b && a > c) {
             } else {
                 if (a > b && a < c) {
-                    System.out.println(String.format("Ответ: a = %s", +a));
+                    System.out.println(String.format("Ответ: a = %s", a));
                 } else {
                     if (b < a && b > c) {
                     } else {
                         if (b > a && b < c) {
-                            System.out.println(String.format("Ответ: b = %s", +b));
+                            System.out.println(String.format("Ответ: b = %s", b));
                         } else {
                             if (c < a && c > b) {
                             } else {
                                 if (c > a && c < b) {
-                                    System.out.println(String.format("Ответ: c = %s", +c));
+                                    System.out.println(String.format("Ответ: c = %s", c));
                                 }
                             }
                         }
@@ -54,10 +52,10 @@ class MyFirstParasha {
         int b = 4;
         System.out.println(String.format("Задание №3: \nВывести нечетное число из двух чисел: a = %s, b = %s.", +a, +b));
         if (a % 2 != 0) {
-            System.out.println(String.format("Ответ: a = %s", +a));
+            System.out.println(String.format("Ответ: a = %s", a));
         } else {
             if (b % 2 != 0) {
-                System.out.println(String.format("Ответ: b = %s", +b));
+                System.out.println(String.format("Ответ: b = %s", b));
             } else {
                 System.out.println(String.format("Нет нечетных чисел"));
             }
@@ -67,7 +65,7 @@ class MyFirstParasha {
     public static void task4() {
         int a = 5;
         int b = 4;
-        System.out.println(String.format("Задание №4: \nПроверка кратности числа: a = %s и b = %s.", +a, +b));
+        System.out.println(String.format("Задание №4: \nПроверка кратности числа: a = %s и b = %s.", a, b));
         if ((a % b) == 0) {
             System.out.println(String.format("Первое число кратно второму."));
         } else {
@@ -80,20 +78,17 @@ class MyFirstParasha {
         double x = -4.0;
         if (x > 0) {
             double y = x - 2;
-            System.out.println(String.format("Ответ: y = %s", +y));
+            System.out.println(String.format("Ответ: y = %s", y));
         } else {
             if (x == 0) {
                 double y = 0;
-                System.out.println(String.format("Ответ: y = %s", +y));
+                System.out.println(String.format("Ответ: y = %s", y));
             } else {
-                if (x < 0) {
                     double y = Math.abs(x);
-                    System.out.println(String.format("Ответ: y = %s", +y));
+                    System.out.println(String.format("Ответ: y = %s", y));
                 }
             }
         }
-    }
-
     public static void task6() {
         System.out.println(String.format("Задание №6: \nОпределение четверти на координатной плоскости"));
         double x = 0;
@@ -185,12 +180,12 @@ class MyFirstParasha {
     }
 
     public static void task10() {
-        int year = 2024;
-        System.out.println(String.format("Задание №10 \nОпределить високосный год или нет: %s.", +year));
-        if ((year % 4 == 0 && (year % 400 == 0) || (year % 100 != 0))) {
-            System.out.println(String.format("Год: %s - является вискокосным.", +year));
+        int year = 200;
+        System.out.println(String.format("Задание №10 \nОпределить високосный год или нет: %s.", year));
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(String.format("Год: %s - является вискокосным.", year));
         } else {
-            System.out.println(String.format("Год: %s не является вискокосным.", +year));
+            System.out.println(String.format("Год: %s не является вискокосным.", year));
         }
     }
 
