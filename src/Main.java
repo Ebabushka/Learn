@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class MyFirstParasha {
 
     public static void task1() {
