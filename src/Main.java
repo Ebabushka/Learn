@@ -11,10 +11,10 @@ class MyFirstParasha {
             if (b > a && b > c) {
                 System.out.println(String.format("Ответ: b = %s", +b));
             } else {
-                    System.out.println(String.format("Ответ: c = %s", +c));
-                }
+                System.out.println(String.format("Ответ: c = %s", +c));
             }
         }
+    }
 
     public static void task2() {
         Double a = 4.0;
@@ -24,23 +24,14 @@ class MyFirstParasha {
         if (a.equals(b) || a.equals(c) || b.equals(c)) {
             System.out.println(String.format("Ошибка"));
         } else {
-            if (a < b && a > c) {
+            if (a < b && a > c && a > b && a < c) {
+                System.out.println(String.format("Ответ: a = %s", a));
             } else {
-                if (a > b && a < c) {
-                    System.out.println(String.format("Ответ: a = %s", a));
+                if (b < a && b > c && b > a && b < c) {
+                    System.out.println(String.format("Ответ: b = %s", b));
                 } else {
-                    if (b < a && b > c) {
-                    } else {
-                        if (b > a && b < c) {
-                            System.out.println(String.format("Ответ: b = %s", b));
-                        } else {
-                            if (c < a && c > b) {
-                            } else {
-                                if (c > a && c < b) {
-                                    System.out.println(String.format("Ответ: c = %s", c));
-                                }
-                            }
-                        }
+                    if (c < a && c > b && c > a && c < b) {
+                        System.out.println(String.format("Ответ: c = %s", c));
                     }
                 }
             }
@@ -84,32 +75,33 @@ class MyFirstParasha {
                 double y = 0;
                 System.out.println(String.format("Ответ: y = %s", y));
             } else {
-                    double y = Math.abs(x);
-                    System.out.println(String.format("Ответ: y = %s", y));
-                }
+                double y = Math.abs(x);
+                System.out.println(String.format("Ответ: y = %s", y));
             }
         }
+    }
+
     public static void task6() {
         System.out.println(String.format("Задание №6: \nОпределение четверти на координатной плоскости"));
         double x = 0;
         double y = 8;
-        if (x > 0 && y > 0) {
-            System.out.println(String.format("Ответ: I четверть"));
+        if (x == 0) {
+            System.out.println(String.format("Точка лежит на оси: X"));
         } else {
-            if (x < 0 && y > 0) {
-                System.out.println(String.format("Ответ: II четверть"));
+            if (y == 0) {
+                System.out.println(String.format("Точка лежит на оси: Y"));
             } else {
-                if (x < 0 && y < 0) {
-                    System.out.println(String.format("Ответ: III четверть"));
+                if (x > 0 && y > 0) {
+                    System.out.println(String.format("Ответ: I четверть"));
                 } else {
-                    if (x > 0 && y < 0) {
-                        System.out.println(String.format("Ответ: IV четверть"));
+                    if (x < 0 && y > 0) {
+                        System.out.println(String.format("Ответ: II четверть"));
                     } else {
-                        if (x == 0 && y > 0 || y < 0) {
-                            System.out.println(String.format("Точка лежит на оси: X"));
+                        if (x < 0 && y < 0) {
+                            System.out.println(String.format("Ответ: III четверть"));
                         } else {
-                            if (y == 0 && x > 0 || x < 0) {
-                                System.out.println(String.format("Точка лежит на оси: Y"));
+                            if (x > 0 && y < 0) {
+                                System.out.println(String.format("Ответ: IV четверть"));
                             }
                         }
                     }
@@ -129,13 +121,7 @@ class MyFirstParasha {
             if (a > b + c && b < a + c && c < a + b) {
                 System.out.println(String.format("Ответ: Треугольник не существует. Сторона А больше."));
             } else {
-                if (a < b + c && b > a + c && c < a + b) {
-                    System.out.println(String.format("Ответ: Треугольник не существует. Сторона B больше."));
-                } else {
-                    if (a < b + c && b < a + c && c > a + b) {
-                        System.out.println(String.format("Ответ: Треугольник не существует. Сторона C больше."));
-                    }
-                }
+                System.out.println(String.format("Ответ: Треугольник не существует"));
             }
         }
     }
@@ -149,9 +135,7 @@ class MyFirstParasha {
         if (hyp <= r) {
             System.out.println(String.format("Точка принадлежит кругу"));
         } else {
-            if (hyp > r) {
-                System.out.println(String.format("Точка не принадлежит кругу"));
-            }
+            System.out.println(String.format("Точка не принадлежит кругу"));
         }
     }
 
