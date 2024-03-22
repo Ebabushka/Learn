@@ -28,7 +28,7 @@ class MyFirstParasha {
         } else {
             if (n > 0) {
                 for (Integer i = 0; i < n; i++) {
-                    res *= a;
+                    res = res * a;
                 }
             } else {
                 for (Integer i = n; i < 0; i++) {
@@ -47,7 +47,8 @@ class MyFirstParasha {
         Double st = 0.5;
         for (Double x = a; x <= b; x += st) {
             Double y = 5 - x * x / 2;
-            System.out.println(String.format("x = %s, \ny = %s,", x, y));
+           System.out.print(x + " ");
+            System.out.print(y + " ");
         }
     }
 
@@ -56,7 +57,7 @@ class MyFirstParasha {
         Integer n = 0;
         Integer a = 4;
         for (Integer i = 1; i <= a; i++) {
-            n *= i;
+            n = n * i;
         }
         System.out.println(String.format("Ответ: %s", n));
         return n;
@@ -67,16 +68,30 @@ class MyFirstParasha {
         Integer a = 0;
         Integer b = 1;
         System.out.print(a + " " + b + " ");
-        for(Integer i = 3; i <= 15; i++) {
+        for (Integer i = 3; i <= 15; i++) {
             Integer c = a + b;
             System.out.print(c + " ");
             a = b;
             b = c;
         }
     }
+
     public static void task_7() {
-    Integer I
-}
+        System.out.println(String.format("\nЗадание №7: \nПроверка гипотезы Сиракуз."));
+        for (Integer i = 20; i <= 30; i++) {
+            Integer res = i;
+            while (res != 1) {
+                if (res % 2 == 0) {
+                    res = res / 2;
+                } else {
+                    res = (res * 3 + 1)/2;
+                }
+                System.out.print(res + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         task_1();
         task_2();
