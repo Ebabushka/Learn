@@ -212,6 +212,7 @@ class MyFirstParasha {
     }
 
     public static void task_16() {
+        System.out.println(String.format("Задание №16: \nУдалить цифру из числа."));
         Integer number = 42542;
         Integer deleteDigit = 2;
         Integer digitNumber = 0;
@@ -222,11 +223,79 @@ class MyFirstParasha {
             number = number / 10;
             if (digitNumber != deleteDigit) {
                 resultNumber = resultNumber + digitNumber * multiplier;
-            multiplier = multiplier * 10;
+                multiplier = multiplier * 10;
             }
         }
-        System.out.println(String.format("Число после удаления цифры: %s", resultNumber));
+        System.out.println(String.format("Число после удаления цифры: %s.", resultNumber));
     }
+
+    public static void task_17() {
+        System.out.println(String.format("Задание №17: \nОпределить количество простых чисел."));
+        Integer counter = 0;
+        Integer number = 0;
+        boolean a;
+        while (number <= 100) {
+            number = number + 1;
+            number++;
+            for (Integer i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    a = false;
+                } else {
+                    a = true;
+                    counter = counter + 1;
+                }
+            }
+        }
+        System.out.println(String.format("Количество простых чисел: %s.", counter));
+    }
+
+    public static void task_18() {
+        Integer m = 110;
+        for (Integer n = 100; n <= m; n++) {
+
+            for (Integer i = 1; i <= m; i++) {
+                if (n % i == 0) ;
+                {
+                    System.out.println(String.format("Ответ: %s", i + " "));
+                }
+            }
+        }
+    }
+
+    public static void task_19() {
+        System.out.println(String.format("Задание №19: \nСовершенные числа."));
+        Integer number = 10000;
+        for (Integer i = 2; i <= number; i++) {
+            Integer sum = 0;
+            Integer j = 1;
+            while (j <= i / 2) {
+                if (i % j == 0) {
+                    sum = sum + j;
+                }
+                j++;
+            }
+            if (sum == i) {
+                System.out.println(String.format("%s - является совершенным числом.", i));
+            }
+        }
+    }
+
+    /*for (Integer i = 0; i <= number; i++) {
+        Integer sum = 0;
+        for (Integer j = 1; j <= i / 2; j++) {
+            if (i % j == 0) {
+                sum = sum + j;
+            }
+            if (sum == i) {
+                System.out.println(String.format("%s - является совершенным числом.", i));
+            }
+        }
+    }*/
+    public static double task_20() {
+        Integer a = 1;
+        return (Math.random() * 1);
+    }
+
 
     public static void main(String[] args) {
         task_1();
@@ -245,5 +314,9 @@ class MyFirstParasha {
         task_14();
         task_15();
         task_16();
+        task_17();
+        task_18();
+        task_19();
+        task_20();
     }
 }
