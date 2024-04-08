@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.lang.Math;
+
 class MyFirstParasha {
     public static void task_1() {
         System.out.println(String.format("Задание №1: \nВывод квадратов натуральных чисел."));
@@ -214,7 +217,7 @@ class MyFirstParasha {
     public static void task_16() {
         System.out.println(String.format("Задание №16: \nУдалить цифру из числа."));
         Integer number = 42542;
-        Integer deleteDigit = 2;
+        Integer deleteDigit = 5;
         Integer digitNumber = 0;
         Integer resultNumber = 0;
         Integer multiplier = 1;
@@ -232,33 +235,26 @@ class MyFirstParasha {
     public static void task_17() {
         System.out.println(String.format("Задание №17: \nОпределить количество простых чисел."));
         Integer counter = 0;
-        Integer number = 0;
-        boolean a;
-        while (number <= 100) {
-            number = number + 1;
-            number++;
-            for (Integer i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i == 0) {
-                    a = false;
-                } else {
-                    a = true;
-                    counter = counter + 1;
-                }
+        Integer number = 25;
+        for (Integer i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i != 0) {
+                counter = counter + 1;
             }
         }
         System.out.println(String.format("Количество простых чисел: %s.", counter));
     }
 
     public static void task_18() {
-        Integer m = 110;
-        for (Integer n = 100; n <= m; n++) {
-
-            for (Integer i = 1; i <= m; i++) {
-                if (n % i == 0) ;
-                {
-                    System.out.println(String.format("Ответ: %s", i + " "));
+        System.out.println(String.format("Задание №18: \nВывести делители чисел в промежутке от 100 до 110."));
+        Integer end = 110;
+        for (Integer beginning = 100; beginning <= end; beginning++) {
+            for (Integer i = 1; i <= end / 2; i++) {
+                if (beginning % i == 0) {
+                    System.out.print(beginning + ":" + " " + i);
                 }
+
             }
+            System.out.println();
         }
     }
 
@@ -280,22 +276,113 @@ class MyFirstParasha {
         }
     }
 
-    /*for (Integer i = 0; i <= number; i++) {
-        Integer sum = 0;
-        for (Integer j = 1; j <= i / 2; j++) {
-            if (i % j == 0) {
-                sum = sum + j;
-            }
-            if (sum == i) {
-                System.out.println(String.format("%s - является совершенным числом.", i));
-            }
+    public static void task_20() {
+        System.out.println(String.format("Задание №20: \nВычисление сумм различных рядов чисел  1, -0.5, 0.25, -0.125, ..."));
+        Double sumNthElementsSeries = 0.0;
+        Double values = 1.0;
+        Integer nthRowElement = 3;
+        for (Integer firstElementRow = 1; firstElementRow <= nthRowElement; firstElementRow++) {
+            sumNthElementsSeries = sumNthElementsSeries + values;
+            values = -values / 2;
         }
-    }*/
-    public static double task_20() {
-        Integer a = 1;
-        return (Math.random() * 1);
+        System.out.println(String.format("Сумма %s элементов ряда: %s.", nthRowElement, sumNthElementsSeries));
     }
 
+    public static void task_21() {
+        System.out.println(String.format("Задание №21: \nВывод на экран таблицы символов ASCII."));
+        for (int i = 32; i <= 126; i++) {
+            System.out.println(String.format("%s: %s", i, (char) i));
+        }
+    }
+
+    public static void task_22() {
+        System.out.println(String.format("Задание №22: \nТаблица умножения."));
+        for (Integer colum_1 = 1; colum_1 <= 9; colum_1++) {
+            for (Integer colum_2 = 1; colum_2 <= 9; colum_2++) {
+                System.out.print(colum_1 + " x " + colum_2 + " = " + (colum_1 * colum_2) + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void task_23() {
+        Integer limitNumber = 5;
+        Integer requiredAmount = 10;
+        System.out.println(String.format("Задание №23: \nКомбинации из трех чисел, дающие в сумме заданное число: %s.", requiredAmount));
+        for (Integer number_1 = 1; number_1 <= limitNumber; number_1++) {
+            for (Integer number_2 = 1; number_2 <= limitNumber; number_2++) {
+                for (Integer number_3 = 1; number_3 <= limitNumber; number_3++) {
+                    Integer sum = number_1 + number_2 + number_3;
+                    if (sum.equals(requiredAmount)) {
+                        System.out.println(String.format("Комбинация чисел: %s; %s; %s.", number_1, number_2, number_3));
+                    }
+                }
+            }
+        }
+    }
+
+    public static void task_24() {
+        Integer a = 10;
+        Integer b = 5;
+        Integer c = 2;
+        Integer result_1 = 100;
+        Integer result_2 = 30;
+        System.out.println(String.format("Решить систему уравнений: \n%s * x + %s * y + %s * z = %s \nx + y + z = %s.", a, b, c, result_1, result_2));
+        for (Double x = 0.0; x <= result_1 / a; x++) {
+            for (Double y = 0.0; y <= result_1 / b; y++) {
+                for (Double z = 0.0; z <= result_1 / c; z++) {
+                    if (a * x + b * y + c * z == result_1 && x + y + z == result_2) {
+                        System.out.println(String.format("Корни уравнений: \nx = %s; y = %s; z = %s", x, y, z));
+                    }
+                }
+            }
+        }
+    }
+
+    public static void task_25() {
+        System.out.println(String.format("Задание №25: \nПростейший калькулятор."));
+        double a = 4;
+        double b = 6;
+        for (int i = 42; i <= 47; i++) {
+            if ((char) i == (char) 42) {
+
+                System.out.println(String.format("Умножение: \nОтвет: %s.", a * b));
+            } else {
+                if ((char) i == (char) 43) {
+                    System.out.println(String.format("Сложение: \nОтвет: %s.", a + b));
+                } else {
+                    if ((char) i == (char) 45) {
+                        System.out.println(String.format("Вычетание: \nОтвет: %s.", a - b));
+                    } else {
+                        if ((char) i == (char) 47) {
+                            System.out.println(String.format("Деление: \nОтвет: %s.", a / b));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public static void task_26() {
+        System.out.println(String.format("Задание №27: \nПрограмма угадай число."));
+        Integer hiddenNumber = 0;
+        Integer enteredNumber = 0;
+        Scanner input = new Scanner(System.in);
+        hiddenNumber = (int) Math.floor(Math.random() * 100);
+        while (enteredNumber != hiddenNumber) {
+            System.out.println(String.format("Введите число: "));
+            enteredNumber = input.nextInt();
+            if (enteredNumber > hiddenNumber) {
+                System.out.println(String.format("Загаданное число меньше."));
+            } else {
+                if (enteredNumber < hiddenNumber) {
+                    System.out.println(String.format("Загаданное число больше."));
+                } else {
+                    System.out.println(String.format("Вы угадали!"));
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         task_1();
@@ -318,5 +405,11 @@ class MyFirstParasha {
         task_18();
         task_19();
         task_20();
+        task_21();
+        task_22();
+        task_23();
+        task_24();
+        task_25();
+        task_26();
     }
 }
