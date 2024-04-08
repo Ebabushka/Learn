@@ -364,7 +364,7 @@ class MyFirstParasha {
     }
 
     public static void task_26() {
-        System.out.println(String.format("Задание №27: \nПрограмма угадай число."));
+        System.out.println(String.format("Задание №26: \nПрограмма угадай число."));
         Integer hiddenNumber = 0;
         Integer enteredNumber = 0;
         Scanner input = new Scanner(System.in);
