@@ -20,6 +20,7 @@ class MyFirstParasha {
                 max = massive[i];
             }
         }
-        System.out.println(min + " " + max);
+        int [] massive_2 = {length, min, max};
+        System.out.println(Arrays.toString(massive_2));
     }
 }
