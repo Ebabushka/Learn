@@ -1,0 +1,38 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Arrays;\r\nimport java.util.Random;\r\n\r\nclass MyFirstParasha {\r\n    public static void main(String[] args) {\r\n        int length = 10;\r\n        int[] massive = new int[length];\r\n        Random random = new Random();\r\n        for (int i = 0; i < length; i++) {\r\n            massive[i] = random.nextInt(201) - 100;\r\n        }\r\n        System.out.println(Arrays.toString(massive));\r\n        int min, max;\r\n        min = max = massive[0];\r\n        for (int i = 1; i < length; i++) {\r\n            if (massive[i] < min) {\r\n                min = massive[i];\r\n            }\r\n            if (massive[i] > max) {\r\n                max = massive[i];\r\n            }\r\n        }\r\n        int [] massive_2 = {length, min, max};\r\n        System.out.println(Arrays.toString(massive_2));\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -5,22 +5,13 @@
+     public static void main(String[] args) {
+         int length = 10;
+         int[] massive = new int[length];
++        int minNumber = 10;
++        int maxNumber = 40;
+         Random random = new Random();
+         for (int i = 0; i < length; i++) {
+-            massive[i] = random.nextInt(201) - 100;
++            massive[i] = random.nextInt(maxNumber-minNumber)+minNumber;
+         }
+         System.out.println(Arrays.toString(massive));
+-        int min, max;
+-        min = max = massive[0];
+-        for (int i = 1; i < length; i++) {
+-            if (massive[i] < min) {
+-                min = massive[i];
+-            }
+-            if (massive[i] > max) {
+-                max = massive[i];
+-            }
+-        }
+-        int [] massive_2 = {length, min, max};
+-        System.out.println(Arrays.toString(massive_2));
+     }
++    System.out.println(String.format)
+ }
+\ No newline at end of file

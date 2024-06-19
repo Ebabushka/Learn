@@ -1,0 +1,45 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class MyFirstParasha {\r\n\r\n    public static void task1() {\r\n        Double a = 11.0;\r\n        Double b = 9.0;\r\n        Double c = 12.0;\r\n        System.out.println(String.format(\"Задание №1: \\nНайти наибольшее из трех чисел: a = %s, b = %s, c = %s.\", +a, +b, +c));\r\n        if (a > b && a > c) {\r\n            System.out.println(String.format(\"Ответ: a = %s\", a));\r\n        } else {\r\n            if (b > a && b > c) {\r\n                System.out.println(String.format(\"Ответ: b = %s\", b));\r\n            } else {\r\n                System.out.println(String.format(\"Ответ: c = %s\", c));\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void task2() {\r\n        Double a = 4.0;\r\n        Double b = 5.0;\r\n        Double c = 4.0;\r\n        System.out.println(String.format(\"Задание №2: \\n среднее из трех чисел: a = %s, b = %s, c = %s.\", +a, +b, +c));\r\n        if (a.equals(b) || a.equals(c) || b.equals(c)) {\r\n            System.out.println(String.format(\"Ошибка\"));\r\n        } else {\r\n            if (a < b && a > c && a > b && a < c) {\r\n                System.out.println(String.format(\"Ответ: %s\", a));\r\n            } else {\r\n                if (b < a && b > c && b > a && b < c) {\r\n                    System.out.println(String.format(\"Ответ: %s\", b));\r\n                } else {\r\n                    System.out.println(String.format(\"Ответ: %s\", c));\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void task3() {\r\n        Integer a = 4;\r\n        Integer b = 4;\r\n        System.out.println(String.format(\"Задание №3: \\nВывести нечетное число из двух чисел: a = %s, b = %s.\", +a, +b));\r\n        if (a % 2 != 0) {\r\n            System.out.println(String.format(\"Ответ: a = %s\", a));\r\n        } else {\r\n            if (b % 2 != 0) {\r\n                System.out.println(String.format(\"Ответ: b = %s\", b));\r\n            } else {\r\n                System.out.println(String.format(\"Нет нечетных чисел\"));\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void task4() {\r\n        Integer a = 5;\r\n        Integer b = 4;\r\n        System.out.println(String.format(\"Задание №4: \\nПроверка кратности числа: a = %s и b = %s.\", a, b));\r\n        if ((a % b) == 0) {\r\n            System.out.println(String.format(\"Первое число кратно второму.\"));\r\n        } else {\r\n            System.out.println(String.format(\"Первое число некратно второму. \\nОстаок: %d\", a % b));\r\n        }\r\n    }\r\n\r\n    public static void task5() {\r\n        System.out.println(String.format(\"Задание №5: \\nВычислить значения функции: y=f(x)\"));\r\n        Double x = -4.0;\r\n        if (x > 0) {\r\n            Double y = x - 2;\r\n            System.out.println(String.format(\"Ответ: y = %s\", y));\r\n        } else {\r\n            if (x == 0) {\r\n                Double y = 0.0;\r\n                System.out.println(String.format(\"Ответ: y = %s\", y));\r\n            } else {\r\n                Double y = Math.abs(x);\r\n                System.out.println(String.format(\"Ответ: y = %s\", y));\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void task6() {\r\n        System.out.println(String.format(\"Задание №6: \\nОпределение четверти на координатной плоскости\"));\r\n        Double x = 0.0;\r\n        Double y = 8.0;\r\n        if (x == 0) {\r\n            System.out.println(String.format(\"Точка лежит на оси: X\"));\r\n        } else {\r\n            if (y == 0) {\r\n                System.out.println(String.format(\"Точка лежит на оси: Y\"));\r\n            } else {\r\n                if (x > 0 && y > 0) {\r\n                    System.out.println(String.format(\"Ответ: I четверть\"));\r\n                } else {\r\n                    if (x < 0 && y > 0) {\r\n                        System.out.println(String.format(\"Ответ: II четверть\"));\r\n                    } else {\r\n                        if (x < 0 && y < 0) {\r\n                            System.out.println(String.format(\"Ответ: III четверть\"));\r\n                        } else {\r\n                            if (x > 0 && y < 0) {\r\n                                System.out.println(String.format(\"Ответ: IV четверть\"));\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void task7() {\r\n        System.out.println(String.format(\"Задание №7 \\nОпределить возможность существования треугольника по сторонам\"));\r\n        Double a = 4.0;\r\n        Double b = 5.0;\r\n        Double c = 6.0;\r\n        if (a < b + c && b < a + c && c < a + b) {\r\n            System.out.println(String.format(\"Ответ: Треугольник существует\"));\r\n        } else {\r\n            System.out.println(String.format(\"Ответ: Треугольник не существует\"));\r\n        }\r\n    }\r\n\r\n    public static void task8() {\r\n        System.out.println(String.format(\"Задача №8 \\nПринадлежит ли точка кругу с центром в начале координат\"));\r\n        Double x = 4.0;\r\n        Double y = 5.0;\r\n        Double r = 3.0;\r\n        Double hyp = Math.sqrt(x * x + y * y);\r\n        if (hyp <= r) {\r\n            System.out.println(String.format(\"Точка принадлежит кругу\"));\r\n        } else {\r\n            System.out.println(String.format(\"Точка не принадлежит кругу\"));\r\n        }\r\n    }\r\n\r\n    public static void task9() {\r\n        Integer pl = 1;\r\n        System.out.println(String.format(\"Задание №9 \\nВычисление площади геометрических фигур\"));\r\n        if (pl == 1) {\r\n            Double a = 4.0;\r\n            Double b = 2.0;\r\n            Double s_pr = a * b;\r\n            System.out.println(String.format(\"Площадь прямоугольника: = %s\", s_pr));\r\n        } else {\r\n            if (pl == 2) {\r\n                Double d = 4.0;\r\n                Double h = 8.0;\r\n                Double s_tr = 1 / 2 * d * h;\r\n                System.out.println(String.format(\"Площадь треугольника: = %s\", s_tr));\r\n            } else {\r\n                if (pl == 3) {\r\n                    Double r = 4.0;\r\n                    Double s_kr = 4 * Math.PI * r * r;\r\n                    System.out.println(String.format(\"Площадь круга: s_k r= %s\", s_kr));\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    public static void task10() {\r\n        Integer year = 2000;\r\n        System.out.println(String.format(\"Задание №10 \\nОпределить високосный год или нет: %s.\", year));\r\n        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {\r\n            System.out.println(String.format(\"Год: %s - является вискокосным.\", year));\r\n        } else {\r\n            System.out.println(String.format(\"Год: %s не является вискокосным.\", year));\r\n        }\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        task1();\r\n        task2();\r\n        task3();\r\n        task4();\r\n        task5();\r\n        task6();\r\n        task7();\r\n        task8();\r\n        task9();\r\n        task10();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -1,4 +1,5 @@
+ class MyFirstParasha {
++<<<<<<< HEAD
+ 
+     public static void task1() {
+         Double a = 11.0;
+@@ -14,6 +15,28 @@
+                 System.out.println(String.format("Ответ: c = %s", c));
+             }
+         }
++=======
++    public static void task_1() {
++        System.out.println(String.format("Задание №1: \nВывод квадратов натуральных чисел."));
++        Integer i = 0;
++        Integer x = i + 1;
++        Integer n = 50;
++        while (x*x < n) {
++            System.out.println(String.format("Ответ: %s", (Math.pow(x, 2))));
++            x ++;
++        }
++    }
++    public static void task_2() {
++        System.out.println(String.format("Задание №2: \nКубы чисел от A до B."));
++        Integer b = 6;
++        for (Integer a = 0; a <= b; a ++) {
++            System.out.println(String.format("Ответ: %s", (Math.pow(a, 3))));
++        }
++    }
++    public static void main(String[] args) {
++        task_1();
++        task_2();
++>>>>>>> 1d7311c (поправил замечания)
+     }
+ 
+     public static void task2() {
