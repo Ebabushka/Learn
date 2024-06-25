@@ -64,9 +64,78 @@ class MyFirstParasha {
         System.out.println(String.format("\nОтвет: %s", index));
     }
 
+    public static void task_4() {
+        System.out.println(String.format("Задание №4: Определение индекса элемента массива, равного некоторому числу:"));
+        int[] massive = createMassive(10, 5, 20);
+        System.out.print(printMassive(massive));
+        StringBuilder index = new StringBuilder();
+        int enterNumber = 15;
+        for (int i = 0; i < massive.length; i++) {
+            if (massive[i] == enterNumber) {
+                index.append(i).append(" ");
+            }
+        }
+        if (index.length() == 0) {
+            System.out.println(String.format("\nНет такого числа."));
+        } else {
+            System.out.println(String.format("\nОтвет: %s", index));
+        }
+    }
+
+    public static void task_5() {
+        System.out.println(String.format("Задание №5:Определение максимального элемента массива:"));
+        int[] massive = createMassive(10, 5, 20);
+        System.out.print(printMassive(massive));
+        int maxNumber = 0;
+        for (int i = 0; i < massive.length; i++) {
+            if (massive[i] > maxNumber) {
+                maxNumber = massive[i];
+            }
+        }
+        System.out.println(String.format("\nОтвет: %s", maxNumber));
+    }
+
+    public static void task_6() {
+        System.out.println(String.format("Задание №6:Удаление из массива k-го элемента со сдвигом всех расположенных справа от него элементов на одну позицию влево"));
+        int[] massive = createMassive(10, 5, 20);
+        int[] newMassive = new int[massive.length - 1];
+        System.out.print(printMassive(massive));
+        int deleteIndex = 1;
+        for (int i = 0; i < massive.length; i++) {
+            if (i != deleteIndex) {
+                while (i > deleteIndex) {
+                    int newIndex = i;
+                    i = i - 1;
+                    newMassive[newIndex] = massive[i];
+                }
+            }
+        }
+        System.out.println(String.format("\nОтвет: %s", printMassive(newMassive)));
+    }
+
+    public static void task_7() {
+        System.out.println(String.format("Задание №7:Перемещение элементов массива: первый элемент массива записать на место последнего, при этом сдвинув второй, третий, …, последний элементы на одну позицию влево:"));
+        int[] massive = createMassive(10, 5, 20);
+        System.out.print(printMassive(massive));
+        int deleteIndex = 1;
+        for (int i = 0; i < massive.length; i++) {
+            massive[massive.length - 1] = massive[0];
+        }
+        for (int i = 0; i < massive.length; i++) {
+            if (i == deleteIndex) {
+                massive[i - 1] = massive[i];
+            }
+        }
+        System.out.println(String.format("\nОтвет: %s", printMassive(massive)));
+    }
+
     public static void main(String[] args) {
         task_1();
         task_2();
         task_3();
+        task_4();
+        task_5();
+        task_6();
+        task_7();
     }
 }
