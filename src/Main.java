@@ -100,26 +100,66 @@ class MyFirstParasha {
         int[] massive = createMassive(10, 5, 20);
         int[] newMassive = new int[massive.length - 1];
         System.out.print(printMassive(massive));
-        int deleteIndex = 4;
+        int deleteIndex = 0;
         for (int i = 0; i < massive.length - 1; i++) {
             if (i < deleteIndex) {
                 newMassive[i] = massive[i];
             } else {
                 if (i >= deleteIndex) {
-                    int j = i + 1;
-                    newMassive[i] = massive[j];
+                    newMassive[i] = massive[i + 1];
                 }
             }
         }
         System.out.println(String.format("\nОтвет: %s", printMassive(newMassive)));
     }
 
-    public static void main(String[] args) {
-        task_1();
-        task_2();
-        task_3();
-        task_4();
-        task_5();
-        task_6();
+    public static void task_7() {
+        System.out.println(String.format("Задание №7: Перемещение элементов массива: первый элемент массива записать на место последнего, при этом сдвинув второй, третий, …, последний элементы на одну позицию влево:"));
+        int[] massive = createMassive(10, 5, 20);
+        int[] newMassive = new int[massive.length];
+        System.out.print(printMassive(massive));
+        newMassive[massive.length - 1] = massive[0];
+        for (int i = massive.length - 1; i >= 0; i--) {
+            if (i < massive.length - 1) {
+                newMassive[i] = massive[i + 1];
+            } else {
+                if (i == massive[massive.length - 1]) {
+                    newMassive[i] = massive[0];
+                }
+            }
+        }
+        System.out.println(String.format("\nОтвет: %s", printMassive(newMassive)));
     }
-}
+
+    public static void task_8() {
+        System.out.println(String.format("Задание №8: Вставка в массив заданного числа на k-е место со сдвигом k-го, (k + 1)-го, (k + 2)-го, …, последнего элемента на одну позицию вправо:"));
+        int[] massive = createMassive(10, 5, 20);
+        int[] newMassive = new int[massive.length + 1];
+        System.out.print(printMassive(massive));
+        int number = 16;
+        int k = 5;
+        for (int i = 0; i < massive.length + 1; i++) {
+            if (i < k) {
+                newMassive[i] = massive[i];
+            } else {
+                if (i == k) {
+                    newMassive[k] = number;
+                } else {
+                    newMassive[i] = massive[i-1];
+                }
+            }
+        }
+        System.out.println(String.format("\nОтвет: %s", printMassive(newMassive)));
+    }
+
+        public static void main (String[]args){
+            task_1();
+            task_2();
+            task_3();
+            task_4();
+            task_5();
+            task_6();
+            task_7();
+            task_8();
+        }
+    }
