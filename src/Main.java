@@ -145,7 +145,7 @@ class MyFirstParasha {
                 if (i == k) {
                     newMassive[k] = number;
                 } else {
-                    newMassive[i] = massive[i-1];
+                    newMassive[i] = massive[i - 1];
                 }
             }
         }
