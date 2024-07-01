@@ -158,20 +158,25 @@ class MyFirstParasha {
         System.out.print(printMassive(massive));
         for (int i = 0; i < massive.length - 1; i++) {
             if (massive[i] > massive[i + 1]) {
-                System.out.println(String.format("Есьб последовательность."));
+                System.out.println(String.format("Есть последовательность."));
             } else {
             }
         }
     }
+
     public static void task_10() {
         System.out.println(String.format("Задание №10:Проверка наличия в массиве одинаковых элементов:"));
         int[] massive = createMassive(10, 5, 20);
-        for (int i = 0; i > massive.length - 1; i++) {
+        System.out.print(printMassive(massive));
+        for (int i = 0; i < massive.length - 1; i++) {
             if (massive[i] == massive[i + 1]) {
-                    System.out.println(String.format(""));
+                System.out.println(String.format("Похожие элементы массива: %s, %s", massive[i], massive[i + 1]));
+            } else {
+                System.out.println(String.format("Похожие элементы массива не найдено"));
             }
         }
     }
+
     public static void main(String[] args) {
         task_1();
         task_2();
@@ -182,5 +187,6 @@ class MyFirstParasha {
         task_7();
         task_8();
         task_9();
+        task_10();
     }
 }
