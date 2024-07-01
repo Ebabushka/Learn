@@ -152,14 +152,35 @@ class MyFirstParasha {
         System.out.println(String.format("\nОтвет: %s", printMassive(newMassive)));
     }
 
-        public static void main (String[]args){
-            task_1();
-            task_2();
-            task_3();
-            task_4();
-            task_5();
-            task_6();
-            task_7();
-            task_8();
+    public static void task_9() {
+        System.out.println(String.format("Задание №9: Проверка массива на упорядоченность по неубыванию, т. е. определение того, верно ли, что каждый его элемент, начиная со второго, не меньше предыдущего:"));
+        int[] massive = createMassive(10, 5, 20);
+        System.out.print(printMassive(massive));
+        for (int i = 0; i < massive.length - 1; i++) {
+            if (massive[i] > massive[i + 1]) {
+                System.out.println(String.format("Есьб последовательность."));
+            } else {
+            }
         }
     }
+    public static void task_10() {
+        System.out.println(String.format("Задание №10:Проверка наличия в массиве одинаковых элементов:"));
+        int[] massive = createMassive(10, 5, 20);
+        for (int i = 0; i > massive.length - 1; i++) {
+            if (massive[i] == massive[i + 1]) {
+                    System.out.println(String.format(""));
+            }
+        }
+    }
+    public static void main(String[] args) {
+        task_1();
+        task_2();
+        task_3();
+        task_4();
+        task_5();
+        task_6();
+        task_7();
+        task_8();
+        task_9();
+    }
+}
